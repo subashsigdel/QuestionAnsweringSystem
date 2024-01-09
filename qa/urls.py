@@ -4,6 +4,6 @@ from qa import views
 
 urlpatterns = [
     path('', views.home, name='home'),
-    path('form/',views.form,name='fillform')
-      path('form/',views.get_from,name='getfrom')
+    path('form/',views.form,name='fillform'),
+    path('showform/',views.get_form,name='getfrom')
 ]

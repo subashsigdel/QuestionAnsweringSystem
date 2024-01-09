@@ -7,17 +7,18 @@
 </head>
 <body>
     <div>
-        <form action={{polls:get_form}} method="post">
+        <form action="/get_from" method="post">
             <label for="frist_name">frist_name</label>
-            <input type="text">
-            <label for="last_name">frist_name</label>
-            <input type="text">
-            <label for="username">frist_name</label>
-            <input type="text">
-            <label for="password">frist_name</label>
-            <input type="text">
-            <label for="email">frist_name</label>
-            <input type="text">
+            <input type="text" name="fristname">
+            <label for="last_name">last_name</label>
+            <input type="text" name="lastname">
+            <label for="username">Username</label>
+            <input type="text" name="username">
+            <label for="password">password</label>
+            <input type="text" name="password">
+            <label for="email">email</label>
+            <input type="text" name="email">
+            <button type="submit">Submit</button>
 
         </form>
     </div>

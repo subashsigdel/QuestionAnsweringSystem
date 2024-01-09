@@ -19,6 +19,7 @@ def form(request):
     return render(request,"form.html")
 
 
-def get_from(request):
-    firstname = request.first_name
-    last_name = request.last_name
+def get_form(request):
+    print("***************")
+    print(request.POST)
+    print("***************")
