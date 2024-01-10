@@ -14,6 +14,14 @@
     <h2>Lastname = {{i.last_name}} </h2> 
    <h2>password = {{i.password}}</h2>
    <h2>email = {{i.email}}</h2>
+   
+
+   <form action="/delete/" method="POST">
+    {%csrf_token%}
+    {{i.username}}
+    <button>Delete</button>
+
+   </form>
 
 </div>
 

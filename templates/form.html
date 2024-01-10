@@ -7,11 +7,12 @@
 </head>
 <body>
     <div>
-        <form action="/get_from" method="post">
+        <form action="/showform/" method="post">
+            {%csrf_token%}
             <label for="frist_name">frist_name</label>
-            <input type="text" name="fristname">
+            <input type="text" name="frist_name">
             <label for="last_name">last_name</label>
-            <input type="text" name="lastname">
+            <input type="text" name="last_name">
             <label for="username">Username</label>
             <input type="text" name="username">
             <label for="password">password</label>
