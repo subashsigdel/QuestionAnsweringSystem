@@ -18,3 +18,10 @@ class User(models.Model):
 
     # class Comments():
         # commented_by commented_at post 
+    
+
+
+class Books(models.Model):
+    title = models.CharField(max_length=100)
+    total_pages = models.IntegerField()
+    author_name = models.CharField(max_length=100)

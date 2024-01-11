@@ -1,5 +1,7 @@
-from django.shortcuts import render, HttpResponse
-from qa.models import User
+from django.shortcuts import render, HttpResponse,get_object_or_404,HttpResponseRedirect
+from qa.models import User,Books
+from .forms import BookCreatefrom
+from django.views import generic
 
 # Create your views here.
 def home(request):
@@ -20,11 +22,10 @@ def form(request):
 
 
 def delete(request):
-
     username = request.POST.get("username")
-    User.delete(username)
-
-    return render(request,"home.html")
+    user = get_object_or_404(User, username=username)
+    user.delete()
+    return HttpResponseRedirect("/")
 
 def get_form(request):
     frist_name = request.POST.get("frist_name")
@@ -55,3 +56,16 @@ def get_form(request):
 
 
 
+def book_form(request):
+    if request.method =="POST":
+        form = BookCreatefrom()
+        if form.is_valid():
+            form.save()
+        return HttpResponseRedirect("/")
+    else:
+        form = BookCreatefrom()
+        return render(request,"book_create.html",context={"form":form})
+
+class BooksListView(generic.ListView):
+    model = Books
+    template_name = "book_list.html"

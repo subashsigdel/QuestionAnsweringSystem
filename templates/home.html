@@ -18,7 +18,7 @@
 
    <form action="/delete/" method="POST">
     {%csrf_token%}
-    {{i.username}}
+    <input type="hidden" name="username" value="{{ i.username }}">
     <button>Delete</button>
 
    </form>
