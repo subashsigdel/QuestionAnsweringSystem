@@ -1,0 +1,58 @@
+
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+
+
+section {
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input,
+textarea {
+    margin-bottom: 15px;
+    padding: 5px;
+}
+
+
+
+
+
+.question {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.votes {
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+
+.actions {
+    margin-left: auto;
+}
+
+.upvote,
+.answer {
+    margin-right: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+

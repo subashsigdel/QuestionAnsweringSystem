@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack Overflow-like UI</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 16px;
+            margin: 0 8px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        /* Add new style for the search bar */
+        .search-bar {
+            display: inline-block;
+            margin-left: auto;
+        }
+
+        input[type="text"] {
+            padding: 8px;
+            border: none;
+            border-radius: 4px;
+            margin-right: 8px;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .vote {
+            display: inline-block;
+            font-size: 20px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        .vote:hover {
+            color: #2184bd;
+        }
+
+        .vote-count {
+            margin-right: 5px;
+        }
+
+        .content {
+            margin-left: 20px;
+        }
+
+        .ask-question,
+        .recent-questions,
+        .question,
+        .answer,
+        .answer-form {
+            border-bottom: 1px solid #eee;
+            margin-bottom: 15px;
+            padding: 15px 0;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Stack Overflow-like UI</h1>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <!-- Replace the "Search" link with a search bar -->
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button>Search</button>
+        </div>
+        <a href="#">Login</a>
+        <a href="#">Register</a>
+    </nav>
+
+    <main>
+        <div class="ask-question">
+            <h2>Ask a Question</h2>
+            <textarea placeholder="Type your question here..."></textarea>
+            <button>Ask Question</button>
+        </div>
+
+        <div class="recent-questions">
+            <h2>Recent Questions</h2>
+
+            <div class="question">
+                <div class="vote">
+                    <span class="vote-count">12</span>
+                    <span>&#9650;</span>
+                    <span class="vote-count">3</span>
+                    <span>&#9660;</span>
+                </div>
+                <div class="content">
+                    <h3>How to create a Stack Overflow-like UI?</h3>
+                    <p>This is a sample question. Can you provide an example using HTML and CSS?</p>
+
+                    <!-- Answer section for the question -->
+                    <div class="answer">
+                        <div class="vote">
+                            <span class="vote-count">8</span>
+                            <span>&#9650;</span>
+                            <span class="vote-count">2</span>
+                            <span>&#9660;</span>
+                        </div>
+                        <div class="content">
+                            <h4>Answer:</h4>
+                            <p>This is a sample answer to the question. It may not cover all aspects, but it's a start.</p>
+                        </div>
+                    </div>
+
+                    <!-- Answer form for the question -->
+                    <div class="answer-form">
+                        <h4>Your Answer</h4>
+                        <textarea placeholder="Type your answer here..."></textarea>
+                        <button>Post Answer</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- More recent questions can be added here -->
+
+        </div>
+    </main>
+
+</body>
+</html>
