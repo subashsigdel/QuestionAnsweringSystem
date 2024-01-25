@@ -1,82 +1,59 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
 
-header {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1em 0;
-}
 
 main {
     max-width: 800px;
     margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
-section {
-    margin-bottom: 20px;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-label {
-    margin-bottom: 5px;
-}
-
-input,
-textarea {
-    margin-bottom: 15px;
-    padding: 5px;
-}
-
-button {
-    background-color: #0077cc;
-    color: white;
-    padding: 10px;
+.vote {
+    display: inline-block;
+    font-size: 20px;
     cursor: pointer;
-    border: none;
-}
-
-button:hover {
-    background-color: #0056a6;
-}
-
-.question {
-    border: 1px solid #ddd;
-    padding: 10px;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-}
-
-.votes {
-    font-size: 1.5em;
     margin-right: 10px;
 }
 
-.actions {
-    margin-left: auto;
+.vote:hover {
+    color: #2184bd;
 }
 
-.upvote,
-.answer {
+.vote-count {
     margin-right: 5px;
-    padding: 5px;
+}
+
+.content {
+    margin-left: 20px;
+}
+
+.ask-question,
+.recent-questions,
+.question,
+.answer,
+.answer-form {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 15px;
+    padding: 15px 0;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
 }
 
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1em 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+button:hover {
+    background-color: #45a049;
 }
